@@ -1,6 +1,134 @@
 ---
-import Layout from '@layouts/Default.astro';
+import Layout from "@layouts/Default.astro";
+const contact = {
+	tel: "2816696369",
+	email: "info@magellanev.net"
+}
 ---
+
 <Layout>
-    <p>Coming Soon!</p>
+	<section class="boxSection" id="intro">
+		<div>
+			<h2>Investing in<br />disruptive energy solutions</h2>
+			<p>
+				Magellan Energy Ventures is poised to be a global leader in energy
+				accessibility, leveraging our strategic vision & commitment to
+				creating an energy independent future.
+			</p>
+			<a href={`mailto:${contact.email}`}>Contact Us</a>
+		</div>
+	</section>
+
+	<section class="contentSection">
+		<h2>About Us</h2>
+		<div>
+			<h3>Mission</h3>
+			<p>
+				To create a global energy-tech platform that enhances
+				performance, time management, and safety across diverse energy
+				markets.
+			</p>
+		</div>
+		<div>
+			<h3>Vision</h3>
+			<p>
+				To discover disruptive technologies that will redefine energy
+				management.
+			</p>
+		</div>
+		<div>
+			<h3>Values</h3>
+			<p>
+				Sustainability, Energy Independence, Disruptive Innovation,
+				Safety & Compliance, and Energy Efficiency.
+			</p>
+		</div>
+	</section>
+	<section class="contentSection">
+		<h2>What We Do</h2>
+		<p>We're an energy fund that invests in disruptive technologies.</p>
+		<p>
+			We explore technologies that will revolutionize flow dynamics and
+			energy management.
+		</p>
+		<p>
+			We are also exploring licensing & management consulting
+			opportunities.
+		</p>
+	</section>
+	<section class="contentSection">
+		<h2>Our Commitments</h2>
+		<div>
+			<h3>Sustainability</h3>
+			<p>Self-reliant, consistent energy.</p>
+		</div>
+		<div>
+			<h3>Energy Independence</h3>
+			<p>Powering operations from daily sunlight.</p>
+		</div>
+		<div>
+			<h3>Changing Production</h3>
+			<p>Pursuing eco-friendly solutions.</p>
+		</div>
+		<div>
+			<h3>Energy Efficiency</h3>
+			<p>Improving the quality of energy performance.</p>
+		</div>
+		<div>
+			<h3>Disruptive Innovation</h3>
+			<p>Leveraging AI and emerging technologies.</p>
+		</div>
+		<div>
+			<h3>Safety & Compliance</h3>
+			<p>Staying safe & following the laws.</p>
+		</div>
+	</section>
+	<section class="boxSection">
+		<div>
+			<h2>Stay Engaged</h2>
+			<address>
+				<a href={`tel:+1${contact.tel}`}>{`(${contact.tel.substring(0,3)}) ${contact.tel.substring(3,6)}-${contact.tel.substring(6)}`}</a><br />
+				<a href={`mailto:${contact.email}`}>{contact.email}</a><br />
+				<a href="https://maps.app.goo.gl/km28FrWdX74BS6nB9">
+					3 Riverway Drive, Suite 1750<br />
+					Houston, <abbr title="Texas">TX</abbr> 77056
+				</a>
+			</address>
+			<a href={`mailto:${contact.email}`}>Contact Us</a>
+		</div>
+	</section>
 </Layout>
+
+<style lang="scss">
+	section {
+		display: flex;
+		flex-flow: column nowrap;
+		scroll-snap-type: y mandatory;
+		scroll-snap-align: center;
+		height: 100vh;
+		padding-top: 32px;
+		border: 1px solid black;
+		&.boxSection {
+			justify-content: end;
+			align-items: start;
+			div {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-around;
+				background-color: lightgray;
+				padding: 16px;
+				width: 40vw;
+				height: 40vw;
+			}
+		}
+		&.contentSection {
+			padding: 128px;
+			padding: 32px;
+		}
+	}
+	#intro {
+		background-image: url("https://images.pexels.com/photos/3216615/pexels-photo-3216615.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+		background-size: cover;
+		background-position: bottom;
+	}
+</style>
