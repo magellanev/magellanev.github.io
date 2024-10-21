@@ -1,19 +1,19 @@
 ---
 
 ---
-<header>
+<header id="head">
 	<h1>Magellan EV</h1>
 </header>
 
 <script>
-// window.addEventListener('scroll', () => {
-// 	const scrollPosition = window.scrollY;
-// 	if (scrollPosition > 100) {
-// 		document.body.style.backgroundColor = '#00000000'; // Light red
-// 	} else {
-// 		document.body.style.backgroundColor = '#ffffff'; // White
-// 	}
-// });
+window.addEventListener('scroll', () => {
+	const scrollPosition = window.scrollY;
+	if (scrollPosition > 200) {
+		document.getElementById('head').style.backgroundColor = '#fff';
+	} else {
+		document.getElementById('head').style.backgroundColor = 'rgba(255,255,255,0.4)';
+	}
+});
 </script>
 
 <style>
